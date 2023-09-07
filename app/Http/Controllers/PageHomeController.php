@@ -9,9 +9,9 @@ class PageHomeController extends Controller
     public function __invoke()
     {
         $courses = Course::query()
-        ->released()
-        ->orderByDesc('released_at')
-        ->get();
+            ->released()
+            ->orderByDesc('released_at')
+            ->get();
 
         return view('home', compact('courses'));
     }
